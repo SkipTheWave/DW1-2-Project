@@ -1,0 +1,285 @@
+[gd_scene load_steps=10 format=3 uid="uid://cxielfip5wo51"]
+
+[ext_resource type="Theme" uid="uid://bntluhgnoqlsf" path="res://UI/GUI_theme.tres" id="1_1st83"]
+[ext_resource type="Script" path="res://scenes/battle_logic/BattleManager.gd" id="2_exj64"]
+[ext_resource type="Texture2D" uid="uid://dkrkg1arrha3y" path="res://assets/art/Dragon Quest I - II (GBC)/ui_panel_tab.png" id="2_ksiou"]
+[ext_resource type="PackedScene" uid="uid://t4abjii4xgcm" path="res://scenes/battlers/battler_enemy.tscn" id="3_03aar"]
+[ext_resource type="Texture2D" uid="uid://ixfi7tpmfl7i" path="res://assets/art/Dragon Quest I - II (GBC)/ui_panel.png" id="6_ne024"]
+[ext_resource type="Script" path="res://scenes/ui_scenes/Timeline_UI.gd" id="7_4g4cw"]
+[ext_resource type="Script" path="res://scenes/ui_scenes/MessagePanel.gd" id="7_mpn85"]
+[ext_resource type="PackedScene" uid="uid://d4defm803yilj" path="res://scenes/ui_scenes/timeline_entry_ui.tscn" id="7_rlhjy"]
+[ext_resource type="PackedScene" uid="uid://cbrsquo15q4on" path="res://scenes/ui_scenes/actor_panel.tscn" id="7_sk2qj"]
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1st83")
+script = ExtResource("2_exj64")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ActorPanel" parent="." instance=ExtResource("7_sk2qj")]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.177778
+offset_bottom = 27.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.031
+anchor_top = 0.361
+anchor_right = 0.778
+anchor_bottom = 0.65
+offset_left = 2.08
+offset_top = 4.02
+offset_right = 0.039978
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnemySprites" type="HBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="EnemyBattler" parent="CenterContainer/EnemySprites" instance=ExtResource("3_03aar")]
+layout_mode = 2
+focus_mode = 0
+display_name = "Treevil A"
+curr_level = 10
+
+[node name="EnemyBattler2" parent="CenterContainer/EnemySprites" instance=ExtResource("3_03aar")]
+layout_mode = 2
+display_name = "Treevil B"
+
+[node name="EnemyBattler3" parent="CenterContainer/EnemySprites" instance=ExtResource("3_03aar")]
+layout_mode = 2
+display_name = "Treevil C"
+
+[node name="ActionPanel" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 0.8
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -60.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_ksiou")
+patch_margin_left = 4
+patch_margin_top = 22
+patch_margin_right = 21
+patch_margin_bottom = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="VBox" type="VBoxContainer" parent="ActionPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="ActorName" type="Label" parent="ActionPanel/VBox"]
+layout_mode = 2
+text = " Skip"
+
+[node name="ActionGrid" type="GridContainer" parent="ActionPanel/VBox"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 7
+columns = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonAttack" type="Button" parent="ActionPanel/VBox/ActionGrid"]
+layout_mode = 2
+keep_pressed_outside = true
+text = " ATTACK"
+alignment = 0
+
+[node name="ButtonSkill" type="Button" parent="ActionPanel/VBox/ActionGrid"]
+layout_mode = 2
+keep_pressed_outside = true
+text = " SKILL"
+alignment = 0
+
+[node name="ButtonItem" type="Button" parent="ActionPanel/VBox/ActionGrid"]
+layout_mode = 2
+keep_pressed_outside = true
+text = " ITEM"
+alignment = 0
+
+[node name="ButtonSwitch" type="Button" parent="ActionPanel/VBox/ActionGrid"]
+layout_mode = 2
+keep_pressed_outside = true
+text = " SWITCH"
+alignment = 0
+
+[node name="ButtonDefend" type="Button" parent="ActionPanel/VBox/ActionGrid"]
+layout_mode = 2
+keep_pressed_outside = true
+text = " DEFEND"
+alignment = 0
+
+[node name="ButtonSpell" type="Button" parent="ActionPanel/VBox/ActionGrid"]
+layout_mode = 2
+keep_pressed_outside = true
+text = " SPELL"
+alignment = 0
+
+[node name="ButtonInfo" type="Button" parent="ActionPanel/VBox/ActionGrid"]
+layout_mode = 2
+keep_pressed_outside = true
+text = " INFO"
+alignment = 0
+
+[node name="ButtonRun" type="Button" parent="ActionPanel/VBox/ActionGrid"]
+layout_mode = 2
+keep_pressed_outside = true
+text = " RUN"
+alignment = 0
+
+[node name="MessagePanel" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 0.8
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -60.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("6_ne024")
+patch_margin_left = 4
+patch_margin_top = 22
+patch_margin_right = 21
+patch_margin_bottom = 5
+script = ExtResource("7_mpn85")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="MessagePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.023622
+anchor_top = 0.0847458
+anchor_right = 0.976378
+anchor_bottom = 0.915254
+grow_horizontal = 2
+grow_vertical = 2
+text = "text text text text text text text text text text text text text text text text text text text text text text text text"
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -120.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 1
+script = ExtResource("7_4g4cw")
+
+[node name="TimelineEntry3" parent="Timeline" instance=ExtResource("7_rlhjy")]
+layout_mode = 2
+
+[node name="ActionValue" parent="Timeline/TimelineEntry3" index="0"]
+text = "0"
+
+[node name="Control" parent="Timeline/TimelineEntry3" index="1"]
+offset_left = -32.0
+offset_right = 0.0
+
+[node name="TimelineEntry2" parent="Timeline" instance=ExtResource("7_rlhjy")]
+layout_mode = 2
+
+[node name="ActionValue" parent="Timeline/TimelineEntry2" index="0"]
+text = "15"
+
+[node name="Control" parent="Timeline/TimelineEntry2" index="1"]
+offset_left = -32.0
+offset_right = 0.0
+
+[node name="TimelineEntry8" parent="Timeline" instance=ExtResource("7_rlhjy")]
+layout_mode = 2
+
+[node name="ActionValue" parent="Timeline/TimelineEntry8" index="0"]
+text = "15"
+
+[node name="Control" parent="Timeline/TimelineEntry8" index="1"]
+offset_left = -32.0
+offset_right = 0.0
+
+[node name="TimelineEntry" parent="Timeline" instance=ExtResource("7_rlhjy")]
+layout_mode = 2
+
+[node name="ActionValue" parent="Timeline/TimelineEntry" index="0"]
+text = "33"
+
+[node name="Control" parent="Timeline/TimelineEntry" index="1"]
+offset_left = -32.0
+offset_right = 0.0
+
+[node name="TimelineEntry4" parent="Timeline" instance=ExtResource("7_rlhjy")]
+layout_mode = 2
+
+[node name="TimelineEntry5" parent="Timeline" instance=ExtResource("7_rlhjy")]
+layout_mode = 2
+
+[node name="TimelineEntry6" parent="Timeline" instance=ExtResource("7_rlhjy")]
+layout_mode = 2
+
+[node name="TimelineEntry7" parent="Timeline" instance=ExtResource("7_rlhjy")]
+layout_mode = 2
+
+[node name="Control" parent="Timeline/TimelineEntry7" index="1"]
+offset_left = -32.0
+offset_right = 0.0
+
+[node name="BaseDelay" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="ActionPanel/VBox/ActionGrid/ButtonAttack" to="." method="_on_button_attack_pressed"]
+[connection signal="timeout" from="BaseDelay" to="." method="_on_base_delay_timeout"]
+
+[editable path="Timeline/TimelineEntry3"]
+[editable path="Timeline/TimelineEntry2"]
+[editable path="Timeline/TimelineEntry8"]
+[editable path="Timeline/TimelineEntry"]
+[editable path="Timeline/TimelineEntry7"]

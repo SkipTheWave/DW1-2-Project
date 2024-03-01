@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="BattlerData" load_steps=6 format=3 uid="uid://bl1tnas54xfua"]
+
+[ext_resource type="Script" path="res://scenes/battlers/battler_data.gd" id="1_iq4fc"]
+[ext_resource type="Texture2D" uid="uid://ghlvjocbtd4g" path="res://assets/art/Dragon Quest I - II (GBC)/dw1-2 characters.png" id="2_8rnuc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pggqk"]
+atlas = ExtResource("2_8rnuc")
+region = Rect2(1, 61, 17, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syy2n"]
+atlas = ExtResource("2_8rnuc")
+region = Rect2(1, 61, 17, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtx0y"]
+atlas = ExtResource("2_8rnuc")
+region = Rect2(2, 65, 15, 10)
+
+[resource]
+script = ExtResource("1_iq4fc")
+species_name = "Prince of Midenhall"
+creature_rank = 6
+sprite_full = SubResource("AtlasTexture_syy2n")
+sprite_timeline = SubResource("AtlasTexture_vtx0y")
+sprite_actor = SubResource("AtlasTexture_pggqk")
+equip_slot_A = 0
+equip_slot_B = 0
+equip_slot_C = 1
+equip_slot_D = 2
+equip_slot_E = 3
+forbidden_wield_A = 2
+forbidden_wield_B = 5
+lv1_hp = 30
+lv99_hp = 500
+lv1_mp = 0
+lv99_mp = 100
+lv1_strength = 9
+lv99_strength = 300
+lv1_magic_might = 0
+lv99_magic_might = 60
+lv1_magic_mend = 0
+lv99_magic_mend = 60
+lv1_resilience = 8
+lv99_resilience = 200
+lv1_agility = 5
+lv99_agility = 220
+lv1_deftness = 3
+lv99_deftness = 180
+lv1_charm = 20
+lv99_charm = 120
+resistances = {
+"atkDown": 1.0,
+"charm": 1.0,
+"dark": 0.75,
+"dazzle": 1.0,
+"defDown": 1.0,
+"earth": 1.0,
+"fire": 1.0,
+"fizzle": 1.0,
+"fuddle": 0.5,
+"ice": 1.0,
+"paralysis": 1.0,
+"poison": 1.0,
+"snooze": 1.0,
+"spdDown": 1.0,
+"spellDefDown": 1.0,
+"stun": 1.0,
+"whack": 1.0,
+"wind": 1.0,
+"zap": 0.75
+}

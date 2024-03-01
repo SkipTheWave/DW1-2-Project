@@ -1,0 +1,13 @@
+res://scenes/run.tscn
+res://UI/GUI_theme.tres
+res://scenes/battlers/data/monsters/treevil_data.tres
+res://scenes/battlers/data/heroes/cannock_data.tres
+res://scenes/battlers/data/heroes/midenhall_data.tres
+res://scenes/battlers/data/heroes/moonbrooke_data.tres
+res://scenes/battle.tscn
+res://scenes/battlers/battler_enemy.tscn
+res://scenes/ui_scenes/actor_info_container.tscn
+res://scenes/ui_scenes/actor_panel.tscn
+res://scenes/ui_scenes/select_border.tscn
+res://scenes/battlers/data/actions/attack_action.tres
+res://scenes/battle_logic/BattleManager.gd

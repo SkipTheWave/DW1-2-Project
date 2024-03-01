@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="BattlerData" load_steps=6 format=3 uid="uid://dlaax8ppho6ot"]
+
+[ext_resource type="Script" path="res://scenes/battlers/battler_data.gd" id="1_xm8sb"]
+[ext_resource type="Texture2D" uid="uid://ghlvjocbtd4g" path="res://assets/art/Dragon Quest I - II (GBC)/dw1-2 characters.png" id="2_f48n3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2b65r"]
+atlas = ExtResource("2_f48n3")
+region = Rect2(2, 122, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syy2n"]
+atlas = ExtResource("2_f48n3")
+region = Rect2(2, 122, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63m0i"]
+atlas = ExtResource("2_f48n3")
+region = Rect2(2, 125, 16, 10)
+
+[resource]
+script = ExtResource("1_xm8sb")
+species_name = "Princess of Moonbrooke"
+creature_rank = 6
+sprite_full = SubResource("AtlasTexture_syy2n")
+sprite_timeline = SubResource("AtlasTexture_63m0i")
+sprite_actor = SubResource("AtlasTexture_2b65r")
+equip_slot_A = 0
+equip_slot_B = 0
+equip_slot_C = 1
+equip_slot_D = 2
+equip_slot_E = 3
+forbidden_wield_A = 1
+forbidden_wield_B = 4
+lv1_hp = 21
+lv99_hp = 350
+lv1_mp = 10
+lv99_mp = 330
+lv1_strength = 5
+lv99_strength = 180
+lv1_magic_might = 7
+lv99_magic_might = 300
+lv1_magic_mend = 8
+lv99_magic_mend = 340
+lv1_resilience = 6
+lv99_resilience = 140
+lv1_agility = 6
+lv99_agility = 200
+lv1_deftness = 5
+lv99_deftness = 230
+lv1_charm = 35
+lv99_charm = 200
+resistances = {
+"atkDown": 1.0,
+"charm": 1.0,
+"dark": 1.5,
+"dazzle": 1.0,
+"defDown": 1.0,
+"earth": 1.0,
+"fire": 0.75,
+"fizzle": 1.0,
+"fuddle": 0.5,
+"ice": 0.75,
+"paralysis": 1.0,
+"poison": 1.5,
+"snooze": 0.75,
+"spdDown": 1.0,
+"spellDefDown": 1.0,
+"stun": 1.0,
+"whack": 1.0,
+"wind": 0.75,
+"zap": 1.0
+}

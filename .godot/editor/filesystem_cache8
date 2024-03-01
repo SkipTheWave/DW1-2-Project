@@ -1,0 +1,57 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1708941618
+::res://assets/::1708101013
+dragon-warrior-gbc.ttf::FontFile::2584646770303668746::1682117388::1708101013::1::::<><>::
+::res://assets/art/::1708088859
+tileset.png::CompressedTexture2D::4266602663112892112::1708088857::1708088859::1::::<><>::
+::res://assets/art/Dragon Quest I - II (GBC)/::1708866929
+button_focus.png::CompressedTexture2D::9054910000444070086::1708127610::1708127613::1::::<><>::
+button_selected.png::CompressedTexture2D::4791342981182527669::1708631149::1708631150::1::::<><>::
+debuff_def_down.png::CompressedTexture2D::7728525310173316893::1708866927::1708866929::1::::<><>::
+dw1 monsters.png::CompressedTexture2D::1399471221185563858::1708113311::1708113316::1::::<><>::
+dw1-2 characters.png::CompressedTexture2D::436289589129418196::1708637662::1708637664::1::::<><>::
+dw1-2 in-map monsters.png::CompressedTexture2D::140692419700818505::1707746978::1708042681::1::::<><>::
+dw2 monsters.png::CompressedTexture2D::8866644009548565598::1708111949::1708112775::1::::<><>::
+timeline_ally_marker.png::CompressedTexture2D::1384401699396899016::1708653021::1708653060::1::::<><>::
+timeline_enemy_marker.png::CompressedTexture2D::2784528158914843337::1708653052::1708653060::1::::<><>::
+ui_border_thin.png::CompressedTexture2D::8127682922928915383::1708790778::1708790780::1::::<><>::
+ui_panel.png::CompressedTexture2D::609311019558971644::1708102379::1708102596::1::::<><>::
+ui_panel_tab.png::CompressedTexture2D::7896864160372236984::1708794679::1708794668::1::::<><>::
+ui_panel_thin.png::CompressedTexture2D::1558131295957349429::1708262668::1708262670::1::::<><>::
+::res://scenes/::1708941635
+battle.tscn::PackedScene::6403962580495134270::1708941635::0::1::::<><>::uid://bntluhgnoqlsf::::res://UI/GUI_theme.tres<>res://scenes/battle_logic/BattleManager.gd<>uid://dkrkg1arrha3y::::res://assets/art/Dragon Quest I - II (GBC)/ui_panel_tab.png<>uid://t4abjii4xgcm::::res://scenes/battlers/battler_enemy.tscn<>uid://ixfi7tpmfl7i::::res://assets/art/Dragon Quest I - II (GBC)/ui_panel.png<>res://scenes/ui_scenes/Timeline_UI.gd<>res://scenes/ui_scenes/MessagePanel.gd<>uid://d4defm803yilj::::res://scenes/ui_scenes/timeline_entry_ui.tscn<>uid://cbrsquo15q4on::::res://scenes/ui_scenes/actor_panel.tscn
+player_map.tscn::PackedScene::4716256284921944277::1708653779::0::1::::<><>::uid://ghlvjocbtd4g::::res://assets/art/Dragon Quest I - II (GBC)/dw1-2 characters.png
+run.tscn::PackedScene::2077883653147413432::1708941635::0::1::::<><>::res://scenes/run_state.gd<>uid://b111k72wnn2fc::::res://assets/art/tileset.png<>uid://b8gub1cgxdcs8::::res://scenes/player_map.tscn<>uid://bntluhgnoqlsf::::res://UI/GUI_theme.tres<>uid://cbrsquo15q4on::::res://scenes/ui_scenes/actor_panel.tscn<>res://scenes/battlers/battler_actor.gd<>uid://b840o07pl1rvh::::res://scenes/battlers/data/heroes/cannock_data.tres<>uid://bl1tnas54xfua::::res://scenes/battlers/data/heroes/midenhall_data.tres<>uid://dlaax8ppho6ot::::res://scenes/battlers/data/heroes/moonbrooke_data.tres
+run_state.gd::GDScript::-1::1708698606::0::1::::<>Node<>::
+::res://scenes/battlers/::1708941635
+base_battler.gd::GDScript::-1::1708696242::0::1::::Battler<>Node<>::
+battler_actor.gd::GDScript::-1::1708696233::0::1::::BattlerActor<>Battler<>::
+battler_data.gd::GDScript::-1::1708618518::0::1::::BattlerData<>Resource<>::
+battler_enemy.gd::GDScript::-1::1708866832::0::1::::BattlerEnemy<>Battler<>::
+battler_enemy.tscn::PackedScene::1393457255255988464::1708941635::0::1::::<><>::uid://bntluhgnoqlsf::::res://UI/GUI_theme.tres<>res://scenes/battlers/battler_enemy.gd<>uid://dylcljdrt0bac::::res://assets/art/Dragon Quest I - II (GBC)/dw2 monsters.png<>uid://bcip82m4cltkd::::res://scenes/battlers/data/monsters/treevil_data.tres<>uid://diydnr72l1hws::::res://scenes/ui_scenes/select_border.tscn
+::res://scenes/battlers/data/::1708625332
+::res://scenes/battlers/data/heroes/::1708941635
+cannock_data.tres::Resource/BattlerData::4764063767764501621::1708941635::0::1::::<><>::res://scenes/battlers/battler_data.gd<>uid://ghlvjocbtd4g::::res://assets/art/Dragon Quest I - II (GBC)/dw1-2 characters.png
+midenhall_data.tres::Resource/BattlerData::3213348652709544324::1708941635::0::1::::<><>::res://scenes/battlers/battler_data.gd<>uid://ghlvjocbtd4g::::res://assets/art/Dragon Quest I - II (GBC)/dw1-2 characters.png
+moonbrooke_data.tres::Resource/BattlerData::7931382161491565291::1708941635::0::1::::<><>::res://scenes/battlers/battler_data.gd<>uid://ghlvjocbtd4g::::res://assets/art/Dragon Quest I - II (GBC)/dw1-2 characters.png
+::res://scenes/battlers/data/monsters/::1708941635
+treevil_data.tres::Resource/BattlerData::2544284517080864059::1708941635::0::1::::<><>::res://scenes/battlers/battler_data.gd<>uid://dylcljdrt0bac::::res://assets/art/Dragon Quest I - II (GBC)/dw2 monsters.png
+::res://scenes/battle_logic/::1708790512
+BattleAction.gd::GDScript::-1::1708557909::0::1::::BattleAction<>Resource<>::
+BattleManager.gd::GDScript::-1::1708790512::0::1::::<>Control<>::
+TimelineEntry.gd::GDScript::-1::1708693237::0::1::::TimelineEntry<>Node<>::
+::res://scenes/ui_scenes/::1708941636
+actor_info_container.gd::GDScript::-1::1708795465::0::1::::<>Control<>::
+actor_info_container.tscn::PackedScene::2505477911421868423::1708941635::0::1::::<><>::uid://bntluhgnoqlsf::::res://UI/GUI_theme.tres<>uid://ghlvjocbtd4g::::res://assets/art/Dragon Quest I - II (GBC)/dw1-2 characters.png<>res://scenes/ui_scenes/actor_info_container.gd<>uid://cai7ypayaw6eb::::res://assets/art/Dragon Quest I - II (GBC)/button_selected.png<>uid://did0xhhd1l6aj::::res://assets/art/Dragon Quest I - II (GBC)/debuff_def_down.png<>uid://diydnr72l1hws::::res://scenes/ui_scenes/select_border.tscn
+actor_panel.gd::GDScript::-1::1708642077::0::1::::<>NinePatchRect<>::
+actor_panel.tscn::PackedScene::4879247184731864061::1708941635::0::1::::<><>::uid://dkrkg1arrha3y::::res://assets/art/Dragon Quest I - II (GBC)/ui_panel_tab.png<>res://scenes/ui_scenes/actor_panel.gd<>uid://bbxw4csww26l4::::res://scenes/ui_scenes/actor_info_container.tscn
+enemy_info_window.tscn::PackedScene::2166190838264138483::1708653779::0::1::::<><>::uid://bntluhgnoqlsf::::res://UI/GUI_theme.tres<>uid://dkrkg1arrha3y::::res://assets/art/Dragon Quest I - II (GBC)/ui_panel_tab.png<>uid://dylcljdrt0bac::::res://assets/art/Dragon Quest I - II (GBC)/dw2 monsters.png
+menu_cursor.tscn::PackedScene::2472942455505528205::1708259331::0::1::::<><>::uid://d2ajbr0tvrtlm::::res://assets/art/Dragon Quest I - II (GBC)/button_focus.png
+MessagePanel.gd::GDScript::-1::1708696288::0::1::::<>NinePatchRect<>::
+select_border.gd::GDScript::-1::1708867018::0::1::::<>Control<>::
+select_border.tscn::PackedScene::7770524176153240570::1708941636::0::1::::<><>::uid://dn2d0rkws1ddv::::res://assets/art/Dragon Quest I - II (GBC)/ui_border_thin.png<>res://scenes/ui_scenes/select_border.gd
+timeline_entry_ui.gd::GDScript::-1::1708652792::0::1::::<>Control<>::
+timeline_entry_ui.tscn::PackedScene::9201184129218015359::1708653779::0::1::::<><>::uid://ixfi7tpmfl7i::::res://assets/art/Dragon Quest I - II (GBC)/ui_panel.png<>res://scenes/ui_scenes/timeline_entry_ui.gd<>uid://dylcljdrt0bac::::res://assets/art/Dragon Quest I - II (GBC)/dw2 monsters.png<>uid://tyu5ne8qvx6g::::res://assets/art/Dragon Quest I - II (GBC)/timeline_ally_marker.png<>uid://bfw31im3e7ye8::::res://assets/art/Dragon Quest I - II (GBC)/timeline_enemy_marker.png<>uid://cai7ypayaw6eb::::res://assets/art/Dragon Quest I - II (GBC)/button_selected.png
+Timeline_UI.gd::GDScript::-1::1708652726::0::1::::<>VBoxContainer<>::
+::res://UI/::1708941635
+GUI_theme.tres::Theme::3338802808655475733::1708941635::0::1::::<><>::uid://bc3a0wofd14hi::::res://assets/dragon-warrior-gbc.ttf<>uid://d2ajbr0tvrtlm::::res://assets/art/Dragon Quest I - II (GBC)/button_focus.png<>uid://cai7ypayaw6eb::::res://assets/art/Dragon Quest I - II (GBC)/button_selected.png<>uid://wg1gvgmmmho4::::res://assets/art/Dragon Quest I - II (GBC)/ui_panel_thin.png<>uid://ixfi7tpmfl7i::::res://assets/art/Dragon Quest I - II (GBC)/ui_panel.png

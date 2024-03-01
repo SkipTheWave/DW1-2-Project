@@ -1,0 +1,132 @@
+[gd_scene load_steps=10 format=3 uid="uid://d4defm803yilj"]
+
+[ext_resource type="Texture2D" uid="uid://ixfi7tpmfl7i" path="res://assets/art/Dragon Quest I - II (GBC)/ui_panel.png" id="1_qu2io"]
+[ext_resource type="Script" path="res://scenes/ui_scenes/timeline_entry_ui.gd" id="2_lelbs"]
+[ext_resource type="Texture2D" uid="uid://dylcljdrt0bac" path="res://assets/art/Dragon Quest I - II (GBC)/dw2 monsters.png" id="3_4hur0"]
+[ext_resource type="Texture2D" uid="uid://tyu5ne8qvx6g" path="res://assets/art/Dragon Quest I - II (GBC)/timeline_ally_marker.png" id="4_n73a1"]
+[ext_resource type="Texture2D" uid="uid://bfw31im3e7ye8" path="res://assets/art/Dragon Quest I - II (GBC)/timeline_enemy_marker.png" id="5_pnrp7"]
+[ext_resource type="Texture2D" uid="uid://cai7ypayaw6eb" path="res://assets/art/Dragon Quest I - II (GBC)/button_selected.png" id="6_5l2uc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srawh"]
+texture = ExtResource("1_qu2io")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ttan"]
+atlas = ExtResource("3_4hur0")
+region = Rect2(31, 285, 32, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wkmd"]
+bg_color = Color(0.25098, 0.25098, 0.25098, 1)
+
+[node name="TimelineEntryUI" type="Panel"]
+custom_minimum_size = Vector2(56, 14)
+theme_override_styles/panel = SubResource("StyleBoxTexture_srawh")
+script = ExtResource("2_lelbs")
+
+[node name="ActionValue" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -4.0
+offset_right = 19.0
+offset_bottom = 5.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "99"
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -5.0
+offset_right = -2.0
+offset_bottom = 5.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Sprite" type="TextureRect" parent="Control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -5.0
+offset_right = 16.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1ttan")
+stretch_mode = 2
+
+[node name="ActorMarker" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -5.5
+offset_right = -2.0
+offset_bottom = 3.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("4_n73a1")
+stretch_mode = 2
+
+[node name="EnemyMarker" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -5.5
+offset_right = -2.0
+offset_bottom = 3.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("5_pnrp7")
+stretch_mode = 2
+
+[node name="DisablePanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2wkmd")
+
+[node name="Cursor" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-4, 6)
+texture = ExtResource("6_5l2uc")
+offset = Vector2(1, 1)
+region_rect = Rect2(8, 31, 15, 14)
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

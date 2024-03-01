@@ -1,0 +1,90 @@
+[gd_scene load_steps=11 format=3 uid="uid://b8gub1cgxdcs8"]
+
+[ext_resource type="Texture2D" uid="uid://ghlvjocbtd4g" path="res://assets/art/Dragon Quest I - II (GBC)/dw1-2 characters.png" id="1_tvfjq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0j6c"]
+atlas = ExtResource("1_tvfjq")
+region = Rect2(0, 60, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ova3s"]
+atlas = ExtResource("1_tvfjq")
+region = Rect2(20, 60, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tenxp"]
+atlas = ExtResource("1_tvfjq")
+region = Rect2(120, 60, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uunv6"]
+atlas = ExtResource("1_tvfjq")
+region = Rect2(140, 60, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1llo"]
+atlas = ExtResource("1_tvfjq")
+region = Rect2(80, 60, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6u34c"]
+atlas = ExtResource("1_tvfjq")
+region = Rect2(100, 60, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06rph"]
+atlas = ExtResource("1_tvfjq")
+region = Rect2(40, 60, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2flg"]
+atlas = ExtResource("1_tvfjq")
+region = Rect2(60, 60, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lxpvp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0j6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ova3s")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tenxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uunv6")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1llo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6u34c")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06rph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2flg")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[node name="PlayerMap" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_lxpvp")
+animation = &"down"
+autoplay = "down"

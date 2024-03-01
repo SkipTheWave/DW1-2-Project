@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbh6abc8f5xrp"]
+
+[ext_resource type="Texture2D" uid="uid://d2ajbr0tvrtlm" path="res://assets/art/Dragon Quest I - II (GBC)/button_focus.png" id="1_f6tu4"]
+
+[node name="MenuCursor" type="Node2D"]
+
+[node name="TextureRect" type="Sprite2D" parent="."]
+texture = ExtResource("1_f6tu4")
+offset = Vector2(-3, 0)

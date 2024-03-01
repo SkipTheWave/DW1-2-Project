@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BattleAction" load_steps=2 format=3 uid="uid://glq8rdhqm5ad"]
+
+[ext_resource type="Script" path="res://scenes/battle_logic/BattleAction.gd" id="1_uv0rd"]
+
+[resource]
+script = ExtResource("1_uv0rd")
+display_name = "ATTACK"
+action_type = 0
+target_type = 3
+mp_cost = 0

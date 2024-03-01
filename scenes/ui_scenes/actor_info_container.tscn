@@ -1,0 +1,125 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbxw4csww26l4"]
+
+[ext_resource type="Theme" uid="uid://bntluhgnoqlsf" path="res://UI/GUI_theme.tres" id="1_gjqnp"]
+[ext_resource type="Texture2D" uid="uid://ghlvjocbtd4g" path="res://assets/art/Dragon Quest I - II (GBC)/dw1-2 characters.png" id="2_5i0cf"]
+[ext_resource type="Script" path="res://scenes/ui_scenes/actor_info_container.gd" id="2_oiyii"]
+[ext_resource type="Texture2D" uid="uid://cai7ypayaw6eb" path="res://assets/art/Dragon Quest I - II (GBC)/button_selected.png" id="4_gitn3"]
+[ext_resource type="Texture2D" uid="uid://did0xhhd1l6aj" path="res://assets/art/Dragon Quest I - II (GBC)/debuff_def_down.png" id="4_pto8k"]
+[ext_resource type="PackedScene" uid="uid://diydnr72l1hws" path="res://scenes/ui_scenes/select_border.tscn" id="5_8m48k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4mehr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuwf5"]
+atlas = ExtResource("2_5i0cf")
+region = Rect2(1, 61, 17, 18)
+
+[node name="ActorInfoContainer" type="MarginContainer"]
+offset_right = 70.0
+offset_bottom = 41.0
+script = ExtResource("2_oiyii")
+
+[node name="VBoxOuter" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme = ExtResource("1_gjqnp")
+theme_override_constants/separation = 4
+
+[node name="Name" type="Label" parent="VBoxOuter"]
+layout_mode = 2
+text = "Skip"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginCont" type="MarginContainer" parent="VBoxOuter"]
+layout_mode = 2
+
+[node name="VBoxInner" type="VBoxContainer" parent="VBoxOuter/MarginCont"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="HBox" type="HBoxContainer" parent="VBoxOuter/MarginCont/VBoxInner"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Panel" type="Panel" parent="VBoxOuter/MarginCont/VBoxInner/HBox"]
+clip_contents = true
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4mehr")
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxOuter/MarginCont/VBoxInner/HBox/Panel"]
+position = Vector2(10, 14)
+texture = SubResource("AtlasTexture_kuwf5")
+region_rect = Rect2(22, 62, 15, 17)
+
+[node name="VBoxLabels" type="VBoxContainer" parent="VBoxOuter/MarginCont/VBoxInner/HBox"]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="HpLabel" type="Label" parent="VBoxOuter/MarginCont/VBoxInner/HBox/VBoxLabels"]
+layout_mode = 2
+text = "Hp 999"
+vertical_alignment = 1
+
+[node name="MpLabel" type="Label" parent="VBoxOuter/MarginCont/VBoxInner/HBox/VBoxLabels"]
+layout_mode = 2
+text = "Mp 200"
+vertical_alignment = 1
+
+[node name="LvlLabel" type="Label" parent="VBoxOuter/MarginCont/VBoxInner/HBox/VBoxLabels"]
+layout_mode = 2
+text = "Lv: 15"
+vertical_alignment = 1
+
+[node name="StatusEffects" type="HBoxContainer" parent="VBoxOuter/MarginCont/VBoxInner"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Debuff" type="TextureRect" parent="VBoxOuter/MarginCont/VBoxInner/StatusEffects"]
+layout_mode = 2
+texture = ExtResource("4_pto8k")
+stretch_mode = 2
+
+[node name="Debuff2" type="TextureRect" parent="VBoxOuter/MarginCont/VBoxInner/StatusEffects"]
+layout_mode = 2
+texture = ExtResource("4_pto8k")
+stretch_mode = 2
+
+[node name="Debuff3" type="TextureRect" parent="VBoxOuter/MarginCont/VBoxInner/StatusEffects"]
+layout_mode = 2
+texture = ExtResource("4_pto8k")
+stretch_mode = 2
+
+[node name="Debuff4" type="TextureRect" parent="VBoxOuter/MarginCont/VBoxInner/StatusEffects"]
+layout_mode = 2
+texture = ExtResource("4_pto8k")
+stretch_mode = 2
+
+[node name="Debuff5" type="TextureRect" parent="VBoxOuter/MarginCont/VBoxInner/StatusEffects"]
+layout_mode = 2
+texture = ExtResource("4_pto8k")
+stretch_mode = 2
+
+[node name="Debuff6" type="TextureRect" parent="VBoxOuter/MarginCont/VBoxInner/StatusEffects"]
+layout_mode = 2
+texture = ExtResource("4_pto8k")
+stretch_mode = 2
+
+[node name="Border" parent="VBoxOuter/MarginCont" instance=ExtResource("5_8m48k")]
+layout_mode = 2
+
+[node name="Selected" parent="VBoxOuter/MarginCont/Border" index="0"]
+anchors_preset = -1
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 2.0
+
+[node name="Cursor" type="Sprite2D" parent="VBoxOuter"]
+visible = false
+z_index = 2
+position = Vector2(40, 46)
+rotation = -1.5708
+texture = ExtResource("4_gitn3")
+region_rect = Rect2(82, 325, 41, 42)
+
+[editable path="VBoxOuter/MarginCont/Border"]

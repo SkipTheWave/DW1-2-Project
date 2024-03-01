@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="BattlerData" load_steps=6 format=3 uid="uid://bcip82m4cltkd"]
+
+[ext_resource type="Script" path="res://scenes/battlers/battler_data.gd" id="1_vqneb"]
+[ext_resource type="Texture2D" uid="uid://dylcljdrt0bac" path="res://assets/art/Dragon Quest I - II (GBC)/dw2 monsters.png" id="2_etyqk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klapt"]
+atlas = ExtResource("2_etyqk")
+region = Rect2(38, 280, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt38p"]
+atlas = ExtResource("2_etyqk")
+region = Rect2(32, 272, 31, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_saha4"]
+atlas = ExtResource("2_etyqk")
+region = Rect2(32, 284, 32, 12)
+
+[resource]
+script = ExtResource("1_vqneb")
+species_name = "Treevil"
+creature_rank = 4
+sprite_full = SubResource("AtlasTexture_qt38p")
+sprite_timeline = SubResource("AtlasTexture_saha4")
+sprite_actor = SubResource("AtlasTexture_klapt")
+equip_slot_A = 0
+equip_slot_B = 0
+equip_slot_C = 3
+equip_slot_D = 3
+equip_slot_E = 4
+forbidden_wield_A = 1
+forbidden_wield_B = 5
+lv1_hp = 26
+lv99_hp = 300
+lv1_mp = 10
+lv99_mp = 300
+lv1_strength = 10
+lv99_strength = 300
+lv1_magic_might = 10
+lv99_magic_might = 300
+lv1_magic_mend = 10
+lv99_magic_mend = 300
+lv1_resilience = 10
+lv99_resilience = 300
+lv1_agility = 10
+lv99_agility = 300
+lv1_deftness = 5
+lv99_deftness = 150
+lv1_charm = 10
+lv99_charm = 300
+resistances = {
+"atkDown": 1.0,
+"charm": 1.0,
+"dark": 1.0,
+"dazzle": 1.0,
+"defDown": 1.0,
+"earth": 1.0,
+"fire": 1.5,
+"fizzle": 1.0,
+"fuddle": 1.0,
+"ice": 1.0,
+"paralysis": 1.0,
+"poison": 1.0,
+"snooze": 1.0,
+"spdDown": 1.0,
+"spellDefDown": 1.0,
+"stun": 1.0,
+"whack": 1.0,
+"wind": 1.0,
+"zap": 1.0
+}

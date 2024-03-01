@@ -1,0 +1,70 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://bntluhgnoqlsf"]
+
+[ext_resource type="FontFile" uid="uid://bc3a0wofd14hi" path="res://assets/dragon-warrior-gbc.ttf" id="1_ntojt"]
+[ext_resource type="Texture2D" uid="uid://d2ajbr0tvrtlm" path="res://assets/art/Dragon Quest I - II (GBC)/button_focus.png" id="1_xij8j"]
+[ext_resource type="Texture2D" uid="uid://cai7ypayaw6eb" path="res://assets/art/Dragon Quest I - II (GBC)/button_selected.png" id="2_yyljj"]
+[ext_resource type="Texture2D" uid="uid://wg1gvgmmmho4" path="res://assets/art/Dragon Quest I - II (GBC)/ui_panel_thin.png" id="3_08om4"]
+[ext_resource type="Texture2D" uid="uid://ixfi7tpmfl7i" path="res://assets/art/Dragon Quest I - II (GBC)/ui_panel.png" id="3_p5eyv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ksm1q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n6mdp"]
+content_margin_left = 0.0
+texture = ExtResource("1_xij8j")
+texture_margin_left = 6.0
+draw_center = false
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mrdku"]
+content_margin_left = 0.0
+texture = ExtResource("1_xij8j")
+texture_margin_left = 6.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77po3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qwu1u"]
+content_margin_left = 2.0
+texture = ExtResource("2_yyljj")
+texture_margin_left = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u6l5h"]
+texture = ExtResource("3_p5eyv")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7xo6g"]
+texture = ExtResource("3_08om4")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mdpu2"]
+bg_color = Color(0.760784, 0.164706, 0.231373, 1)
+corner_detail = 1
+
+[resource]
+default_font = ExtResource("1_ntojt")
+default_font_size = 8
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0.458824, 0.458824, 0.458824, 0.501961)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 8
+Button/styles/disabled = SubResource("StyleBoxEmpty_ksm1q")
+Button/styles/focus = SubResource("StyleBoxTexture_n6mdp")
+Button/styles/hover = SubResource("StyleBoxTexture_mrdku")
+Button/styles/normal = SubResource("StyleBoxEmpty_77po3")
+Button/styles/pressed = SubResource("StyleBoxTexture_qwu1u")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 8
+Panel/styles/panel = SubResource("StyleBoxTexture_u6l5h")
+ProgressBar/styles/background = SubResource("StyleBoxTexture_7xo6g")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_mdpu2")

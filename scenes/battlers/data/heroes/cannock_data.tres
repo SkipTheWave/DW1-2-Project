@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="BattlerData" load_steps=6 format=3 uid="uid://b840o07pl1rvh"]
+
+[ext_resource type="Script" path="res://scenes/battlers/battler_data.gd" id="1_wyp6h"]
+[ext_resource type="Texture2D" uid="uid://ghlvjocbtd4g" path="res://assets/art/Dragon Quest I - II (GBC)/dw1-2 characters.png" id="2_cb4j4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnwux"]
+atlas = ExtResource("2_cb4j4")
+region = Rect2(161, 61, 17, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfp22"]
+atlas = ExtResource("2_cb4j4")
+region = Rect2(161, 61, 17, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fi4b0"]
+atlas = ExtResource("2_cb4j4")
+region = Rect2(162, 64, 15, 10)
+
+[resource]
+script = ExtResource("1_wyp6h")
+species_name = "Prince of Cannock"
+creature_rank = 6
+sprite_full = SubResource("AtlasTexture_hfp22")
+sprite_timeline = SubResource("AtlasTexture_fi4b0")
+sprite_actor = SubResource("AtlasTexture_vnwux")
+equip_slot_A = 0
+equip_slot_B = 0
+equip_slot_C = 1
+equip_slot_D = 2
+equip_slot_E = 3
+forbidden_wield_A = 1
+forbidden_wield_B = 4
+lv1_hp = 24
+lv99_hp = 400
+lv1_mp = 5
+lv99_mp = 260
+lv1_strength = 7
+lv99_strength = 240
+lv1_magic_might = 6
+lv99_magic_might = 240
+lv1_magic_mend = 3
+lv99_magic_mend = 120
+lv1_resilience = 5
+lv99_resilience = 130
+lv1_agility = 7
+lv99_agility = 280
+lv1_deftness = 5
+lv99_deftness = 220
+lv1_charm = 25
+lv99_charm = 170
+resistances = {
+"atkDown": 1.0,
+"charm": 1.0,
+"dark": 1.0,
+"dazzle": 1.0,
+"defDown": 1.0,
+"earth": 1.0,
+"fire": 0.75,
+"fizzle": 1.0,
+"fuddle": 0.5,
+"ice": 0.75,
+"paralysis": 1.0,
+"poison": 1.5,
+"snooze": 1.0,
+"spdDown": 1.0,
+"spellDefDown": 1.0,
+"stun": 1.0,
+"whack": 1.0,
+"wind": 0.75,
+"zap": 1.0
+}
